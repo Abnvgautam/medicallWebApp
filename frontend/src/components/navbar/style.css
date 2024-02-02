@@ -1,0 +1,34 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button-style {
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-weight:700;
+    font-size: 14px;
+    
+}
+
+.container-style {
+    background-color: #A6DCD7;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.navbar-length{
+    height: 85px;
+}
+
+.navbar-content{
+    font-weight: 600;
+    font-size: 14px;
+    margin: 8%;
+
+}
+
+.image-home{
+    margin-top: 50px;
+    margin-right: 14%;
+}
+
