@@ -3,7 +3,7 @@ body {
 }
 
 .button-style {
-    border-radius: 50px;
+    border-radius: 0px;
     padding: 10px 30px;
     font-weight:700;
     font-size: 14px;
@@ -16,6 +16,23 @@ body {
     width: 100%;
 }
 
+.container-style-two{
+    padding-bottom: 73px;
+}
+.container-style-blue {
+    background-color: #0360D9;
+    min-height: 110px;
+    margin-top: -80px;
+}
+
+.container-choose-section{
+    background-color: #0360D9;
+    min-height: 100vh;
+}
+
+.medicallLogo{
+    margin-left: 120px;
+}
 .navbar-length{
     height: 85px;
 }
@@ -23,12 +40,97 @@ body {
 .navbar-content{
     font-weight: 600;
     font-size: 14px;
-    margin: 8%;
+    margin-left: 110px;
+    margin-right: 210px;
 
 }
 
 .image-home{
     margin-top: 50px;
-    margin-right: 14%;
+    margin-right: 10%;
 }
 
+.homeText{
+    margin-left: 176px;
+    margin-top: 80px;
+    font-size: 50px;
+    color: #FFFFFF;
+}
+
+.text-containerNext {
+    color: #0360D9;
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 60px;
+}
+
+.text-para{
+    margin-left: 158px;
+    margin-right: 158px;
+    color:#FFFFFF;
+
+}
+.homepageCard{
+    border-radius: 0px;
+    width: 65%;
+    height: 120px;
+    margin-left: 16rem;
+    margin-top: -30px;
+}
+
+.cardText{
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.select-form{
+    border-radius: 0px;
+    margin-left: 26px;
+    margin-bottom: 30px;
+}
+
+.btn-card{
+    border-radius: 0px;
+    margin-left: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.container-card{
+    margin-top: 66px;
+}
+
+.container-card-two{
+    margin-top: 18px;
+}
+
+.card-title{
+    margin-top: 154px;
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+
+.card-text{
+    font-size: 14px;
+    padding-bottom: 40px;
+}
+
+.card-box{
+    border-radius: 20px;
+
+}
+
+.text-choose-section{
+    font-size: 48px;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-left: 18px;
+    padding-top: 92px;
+}
+
+.text-choose-para{
+    color: #FFFFFF;
+    margin-left: 168px;
+    padding-top: 38px;
+}
