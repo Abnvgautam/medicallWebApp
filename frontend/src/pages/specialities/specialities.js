@@ -1,5 +1,11 @@
+import Navigation from "../../components/navbar/navbar";
+
 const Specialities = () => {
-    return <h1>Specialities</h1>;
+    return (
+        <>
+        <Navigation />
+        </>
+    );
 };
 
 

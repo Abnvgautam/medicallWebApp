@@ -13,10 +13,12 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { yellow } from '@mui/material/colors'
+import Navigation from '../../components/navbar/navbar';
 
 const Home = () => {
     return (
         <>
+        <Navigation />
             {/* Homepage Section */}
 
             <Container fluid className="container-style">

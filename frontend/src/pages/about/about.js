@@ -1,5 +1,11 @@
+import Navigation from "../../components/navbar/navbar";
+
 const About = () => {
-    return <h1>About</h1>;
+    return (
+        <>
+        <Navigation />
+        </>
+    );
 };
 
 

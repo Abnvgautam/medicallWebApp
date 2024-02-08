@@ -3,7 +3,7 @@ import { Navbar, Nav, Button} from 'react-bootstrap'
 import { Link, NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../MEDICALL.svg';
-import Home from '../../pages/home/home';
+
 
 import './style.css';
 
@@ -29,9 +29,9 @@ function Navigation() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto navbar-content " >
               <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-              <Nav.Link as={NavLink} to="/doctors">Our Doctors</Nav.Link>
+              <Nav.Link as={NavLink} to="/ourdoctors">Our Doctors</Nav.Link>
               <Nav.Link as={NavLink} to="/specialities">Specialities</Nav.Link>
-              <Nav.Link as={NavLink} to="/about">About Us</Nav.Link>
+              <Nav.Link as={NavLink} to="/aboutus">About Us</Nav.Link>
             </Nav>
             <Nav className="ml-auto buttons">
               <Button variant="outline-primary" className="mx-4 button-style" >Log In</Button>
@@ -41,7 +41,7 @@ function Navigation() {
         </Container>
         
       </Navbar>
-      <Home />
+
     </>
   );
 }

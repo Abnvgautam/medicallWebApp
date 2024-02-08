@@ -1,5 +1,12 @@
+import Navigation from "../../components/navbar/navbar";
+
 const Doctors = () => {
-    return <h1>Doctors</h1>;
+    return (
+        <>
+        <Navigation />
+        </>
+    );
+
 };
 
 export default Doctors;
