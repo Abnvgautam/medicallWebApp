@@ -3,15 +3,11 @@ import { Navbar, Nav, Button} from 'react-bootstrap'
 import { Link, NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../MEDICALL.svg';
-
-
 import './style.css';
 
 
 
 function Navigation() {
-
-
   return (
     <>
       <Navbar bg="light" data-bs-theme="light" className="navbar-length">
@@ -39,9 +35,7 @@ function Navigation() {
             </Nav>
           </Navbar.Collapse>
         </Container>
-        
       </Navbar>
-
     </>
   );
 }
