@@ -7,7 +7,11 @@ import Container from 'react-bootstrap/Container'
 import { Button, Card, Form, Col, Row } from 'react-bootstrap'
 import './specialities.css'
 import doctor from  './doctor.svg'
-
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 
 const Specialities = () => {
     return (
@@ -69,12 +73,39 @@ const Specialities = () => {
                                     alt="doctorImage"
                                     className="doctor-image"
                                 />
+                               <p className="doctor-name">Dr Sean Paul</p> 
+                               <p className="doctor-desc">Dr. Sean Paul, a seasoned dermatologist, blends expertise with empathy in consultations, offering personalized solutions for various skin concerns. </p>
                             </Col>
+                            
                             <Col>
                                 <p className="doctor-select">Select Date</p>
+                                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                    <DateCalendar />
+                                </LocalizationProvider>
                             </Col>
                             <Col>
-                                
+                            <div className="date-chips">
+                            <Stack direction="row" spacing={1}>
+                                <Chip label="9:30 AM" color="primary" />
+                                <Chip label="10:00 AM" color="primary" variant="outlined"/>
+                            </Stack>
+                            <Stack direction="row" spacing={1} className="date-chips-stack">
+                                <Chip label="10:30 AM" color="primary" />
+                                <Chip label="11:00 AM" color="primary" variant="outlined"/>
+                            </Stack>
+                            <Stack direction="row" spacing={1} className="date-chips-stack">
+                                <Chip label="11:30 AM" color="primary" />
+                                <Chip label="12:00 AM" color="primary" variant="outlined"/>
+                            </Stack>
+                            <Stack direction="row" spacing={1} className="date-chips-stack">
+                                <Chip label="9:30 AM" color="primary" />
+                                <Chip label="10:00 AM" color="primary" variant="outlined"/>
+                            </Stack>
+                            </div>
+                            <Button variant="primary" className='btn-booking'>Book Now</Button>
+                            
+                            
+                            
                             </Col>
                         </Row>
                     </Container>
