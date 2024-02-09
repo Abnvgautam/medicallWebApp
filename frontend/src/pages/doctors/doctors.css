@@ -1,0 +1,23 @@
+.ourDoctors-card{
+    border-radius: 0px;
+    width: 65%;
+    height: 120px;
+    margin-left: 16rem;
+    position: relative;
+    top: 60px;
+    
+}
+.ourDoctors-blue{
+    background-color: #0360D9;
+    height: 237px;
+}
+.doctors-specialities{
+    background-color: #A6DCD7;
+    height: 890px;
+}
+
+.doctor-team{
+    width: 84.5%;
+    margin-top: 50px;
+    margin-left: 120px;
+}

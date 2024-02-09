@@ -1,0 +1,38 @@
+.specialities-card{
+    border-radius: 0px;
+    width: 65%;
+    height: 120px;
+    margin-left: 16rem;
+    position: relative;
+    top: 60px;
+}
+.specialities-card-big{
+    border-radius: 0px;
+    width: 65%;
+    height: 463px;
+    margin-left: 16rem;
+    position: relative;
+}
+
+.specialities-blue{
+    background-color: #0360D9;
+    height: 800px;
+}
+
+.result{
+    margin-left: 19%;
+    margin-top: 6%;
+    font-size: 28px;
+    color: white;
+    font-weight:lighter;
+}
+
+.doctor-image{
+    margin-top: 22px;
+    margin-left: 10px;
+}
+
+.doctor-select{
+    font-size: 24px;
+    margin-top: 14px;
+}

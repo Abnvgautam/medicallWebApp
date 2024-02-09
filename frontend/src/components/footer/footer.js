@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
-import { Col, Row } from 'react-bootstrap'
+import { Nav, Col, Row } from 'react-bootstrap'
+import {NavLink} from 'react-router-dom'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
@@ -19,10 +20,10 @@ const Footer =() => {
                     <Col>
                         <p className='footer-text'>Useful Links</p>
                             <ul className='list-items'>
-                                <li>Home</li>
-                                <li>Our Doctors</li>
-                                <li>Specialities</li>
-                                <li>Contact Us</li>
+                                <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+                                <Nav.Link as={NavLink} to="/ourdoctors">Our Doctors</Nav.Link>
+                                <Nav.Link as={NavLink} to="/specialities">Specialities</Nav.Link>
+                                <Nav.Link as={NavLink} to="/aboutus">About Us</Nav.Link>
                             </ul>
                     </Col>
                     <Col>
