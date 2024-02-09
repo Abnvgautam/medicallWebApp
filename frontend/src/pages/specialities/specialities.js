@@ -102,7 +102,6 @@ const Specialities = () => {
                                 <Chip label="10:00 AM" color="primary" variant="outlined"/>
                             </Stack>
                             </div>
-                            <Button variant="primary" className='btn-booking'>Book Now</Button>
                             
                             
                             
