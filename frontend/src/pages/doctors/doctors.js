@@ -3,8 +3,10 @@ import Navigation from "../../components/navbar/navbar"
 import Support from "../../components/support/support"
 import { Container } from "react-bootstrap";
 import { Button, Card, Form, Col, Row } from 'react-bootstrap'
-import team from './team.svg'
+import doctorTeam from './doctorTeam.svg'
 import './doctors.css'
+import iconOne from './iconOne.png'
+import iconTwo from './iconTwo.png'
 import doctorOne from './doctorOne.svg'
 
 
@@ -58,12 +60,12 @@ const Doctors = () => {
         </Container>
         <Container fluid className="doctors-specialities">
             <img 
-                src={team}
+                src={doctorTeam}
                 width="1205"
                 height="760"
                 alt="doctorteam"
                 className="doctor-team"
-                // style={{background: "linear-gradient(#e66465, #9198e5);"}}
+                
             />
             <Row>
                 <Col>
@@ -73,8 +75,31 @@ const Doctors = () => {
                 <p className="doctor-teamText-two">
                     Knee joint replacement is a surgery to 
                     replace a knee joint with a man-made artificial joint.
+                    <Row className="icons-row">
+                        <Col>
+                        <img 
+                            src={iconOne}
+                            width="40"
+                            height="40"
+                            alt="iconOne"
+                        />
+                            <p className="iconOne-text">3 KM</p>
+                            <p className="iconOne-textTwo">From Hospital</p>
+                        </Col>
+                        <Col>
+                        <img 
+                                src={iconTwo}
+                                width="40"
+                                height="40"
+                                alt="iconTwo"
+                         />
+                                <p className="iconOne-text">5 KM</p>
+                                <p className="iconOne-textTwo">From Pharmacy</p>
+                        </Col>
+                    </Row>
+                    
                 </p>
-              
+                
                 </Col>
             </Row>
             </Container>
