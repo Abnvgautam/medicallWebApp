@@ -59,3 +59,21 @@
     text-transform: uppercase;
     margin-top: 27px;
 }
+
+.doctor-team-text{
+    font-size: 40px;
+    text-align: left;
+    margin-right: 15%;
+    color: white;
+    position: relative;
+    bottom: 110%;
+    left: 26%;
+}
+.doctor-teamText-two{
+    font-size: 24px;
+    margin-right: 240px;
+    color: white;
+    position: relative;
+    bottom: 90%;
+    left: 16%;
+}

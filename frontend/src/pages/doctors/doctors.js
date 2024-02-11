@@ -7,6 +7,7 @@ import team from './team.svg'
 import './doctors.css'
 import doctorOne from './doctorOne.svg'
 
+
 const Doctors = () => {
     return (
         <>
@@ -62,8 +63,22 @@ const Doctors = () => {
                 height="760"
                 alt="doctorteam"
                 className="doctor-team"
+                // style={{background: "linear-gradient(#e66465, #9198e5);"}}
             />
-         </Container>
+            <Row>
+                <Col>
+                <p className="doctor-team-text">Health always begins with a healthy life style. Being healthy will makes you happier.</p>
+                </Col>
+                <Col>
+                <p className="doctor-teamText-two">
+                    Knee joint replacement is a surgery to 
+                    replace a knee joint with a man-made artificial joint.
+                </p>
+              
+                </Col>
+            </Row>
+            </Container>
+
         <Container>
         <p className='text-center text-containerNext'>Our Doctors</p>
         <Card className='ourDoctors-card-two'>
