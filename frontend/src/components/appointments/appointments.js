@@ -1,5 +1,6 @@
 import Navigation from '../../components/navbar/navbar'
 import './appointment.css'
+import '../../pages/patientDashboard/patientDashboard.css'
 import {Container, Card, Col, Row} from 'react-bootstrap'
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import EmailIcon from '@mui/icons-material/Email';
@@ -16,7 +17,7 @@ const Appointments =() =>{
 return(
     <>
         <Navigation />
-            <Container fluid>
+            <Container fluid className='container-patientTab'>
             <Card className='card-patient'>
             <Card.Body>
                         <Row>

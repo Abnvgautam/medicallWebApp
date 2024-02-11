@@ -1,5 +1,5 @@
-import { Card, Col, Row } from 'react-bootstrap'
-import Container from 'react-bootstrap/Container';
+import { Container, Card, Col, Row } from 'react-bootstrap'
+import './services.css'
 
 const Services =()=>{
     return(

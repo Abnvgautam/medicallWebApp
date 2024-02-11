@@ -1,10 +1,10 @@
-import Container from 'react-bootstrap/Container';
-import { Nav, Col, Row } from 'react-bootstrap'
+import { Container, Nav, Col, Row } from 'react-bootstrap'
 import {NavLink} from 'react-router-dom'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import map from '../footer/map.svg'
+import './footer.css'
 
 
 const Footer =() => {

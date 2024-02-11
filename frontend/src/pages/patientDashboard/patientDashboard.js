@@ -17,7 +17,7 @@ const patientDashboard = () =>{
     return(
         <>
             <Navigation />
-            <Container fluid>
+            <Container fluid className='container-patientTab'>
             <Card className='card-patient'>
             <Card.Body>
                         <Row>

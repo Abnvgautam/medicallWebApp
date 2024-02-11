@@ -2,6 +2,7 @@ import { Card, Col, Row } from 'react-bootstrap'
 import avatar from '../testimonials/avatar.svg'
 import StarIcon from '@mui/icons-material/Star'
 import { yellow } from '@mui/material/colors'
+import './testimonials.css'
 
 const Testimonials = () =>{
     return(

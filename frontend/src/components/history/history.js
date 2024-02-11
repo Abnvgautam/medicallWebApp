@@ -1,5 +1,6 @@
 import Navigation from '../../components/navbar/navbar'
 import './history.css'
+import '../../pages/patientDashboard/patientDashboard.css'
 import {Container, Card, Col, Row} from 'react-bootstrap'
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import EmailIcon from '@mui/icons-material/Email';
@@ -10,13 +11,14 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {NavLink} from 'react-router-dom'
+import '../../pages/patientDashboard/patientDashboard.css'
 
 const History =() =>{
 
 return(
     <>
         <Navigation />
-            <Container fluid>
+            <Container fluid className='container-patientTab'>
             <Card className='card-patient'>
             <Card.Body>
                         <Row>

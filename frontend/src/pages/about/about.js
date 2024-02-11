@@ -1,11 +1,11 @@
-import Footer from "../../components/footer/footer";
 import Navigation from "../../components/navbar/navbar";
+import './about.css'
 
 const About = () => {
     return (
         <>
         <Navigation />
-        <Footer />
+       
         </>
     );
 };

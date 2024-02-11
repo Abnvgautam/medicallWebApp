@@ -1,8 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-}
-#root{
-    background-color: white;
+    background-color: white !important;
 }
 
 .button-style {
@@ -48,7 +46,17 @@ body {
 
 }
 
+.image-home{
+    margin-top: 50px;
+    margin-right: 10%;
+}
 
+.homeText{
+    margin-left: 176px;
+    margin-top: 80px;
+    font-size: 50px;
+    color: #FFFFFF;
+}
 
 .text-containerNext {
     color: #0360D9;

@@ -2,6 +2,7 @@ import { Button,Form, Col, Row } from 'react-bootstrap'
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk'
 import EmailIcon from '@mui/icons-material/Email';
 import FaxIcon from '@mui/icons-material/Fax';
+import './contact.css'
 
 const Contact =()=>{
     return(

@@ -1,6 +1,7 @@
-body{
-    background-color: #0360D9;
 
+.container-patientTab{
+    background-color: #0360D9;
+    overflow: auto;
 }
 .card-patient{
     width: 1120px;

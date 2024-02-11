@@ -1,5 +1,5 @@
-import Container from 'react-bootstrap/Container';
-import { Button, Card, Form, Col, Row } from 'react-bootstrap'
+
+import { Container, Button, Card, Form, Col, Row } from 'react-bootstrap'
 
 const BookingCard =()=>{
     return(
