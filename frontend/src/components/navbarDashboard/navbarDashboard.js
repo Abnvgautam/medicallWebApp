@@ -1,16 +1,13 @@
+import '../navbar/style.css'
 import Container from 'react-bootstrap/Container';
-import { Navbar, Nav, Button} from 'react-bootstrap'
+import { Navbar, Nav} from 'react-bootstrap'
 import { Link, NavLink} from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './MEDICALL.svg';
-import './style.css';
+import logo from '../navbar/MEDICALL.svg'
 
-
-
-function Navigation() {
-  return (
+const navbarDashboard =()=>{
+    return(
     <>
-      <Navbar bg="light" data-bs-theme="light" className="navbar-length">
+        <Navbar bg="light" data-bs-theme="light" className="navbar-length">
         <Container fluid >
           <Navbar.Brand as={Link} to="/">
             <img
@@ -30,14 +27,14 @@ function Navigation() {
               <Nav.Link as={NavLink} to="/aboutus">About Us</Nav.Link>
             </Nav>
             <Nav className="ml-auto buttons">
-              <Button variant="outline-primary" className="mx-4 button-style" >Log In</Button>
-              <Button variant="primary" className="button-style">Sign Up</Button>
+              
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
-  );
-}
 
-export default Navigation;
+    );
+};
+
+export default navbarDashboard;
