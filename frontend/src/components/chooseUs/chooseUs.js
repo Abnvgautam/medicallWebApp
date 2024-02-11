@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import choose from '../chooseUs/choose.svg'
-
+import './chooseUs.css'
 
 const ChooseUs =()=>{
     return(

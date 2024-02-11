@@ -1,5 +1,4 @@
-import Container from 'react-bootstrap/Container';
-import { Col, Row } from 'react-bootstrap'
+import { Container, Col, Row } from 'react-bootstrap'
 import homepage from '../home/homepage.svg'
 import Navigation from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
@@ -9,6 +8,7 @@ import Support from '../../components/support/support';
 import Services from '../../components/services/services';
 import Contact from '../../components/contact/contact';
 import Testimonials from '../../components/testimonials/testimonials';
+import './home.css'
 
 const Home = () => {
     return (

@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container'
 import chat from '../support/chat.svg'
 import { Button, Col, Row } from 'react-bootstrap'
+import './support.css'
 
 
 const Support =()=>{
