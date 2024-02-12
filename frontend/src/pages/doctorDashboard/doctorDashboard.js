@@ -4,9 +4,6 @@ import './doctorDashboard.css'
 import logo from './MEDICALL.svg'
 import avatar from './avatar.svg'
 
-
-
-
 const patientDashboard = () =>{
 
     return(
@@ -71,8 +68,18 @@ const patientDashboard = () =>{
         </Row>
     </Container>
     <p className='appointments-text'>Appointments</p>
+    <div className='table-columns'>
+        <p className='columns-text'>Upcoming Consultation</p>
+        <div className="flex-space"></div>
+        <p className='columns-textTwo'>Rescheduled</p>
+        <div className="flex-space"></div>
+        <p className='columns-textTwo'>Canceled</p>
+    </div>
+        
+    
+    
             
-            
+    
             
         </>
     );

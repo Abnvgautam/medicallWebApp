@@ -49,3 +49,20 @@
 .doctorTab-cards{
     --bs-gutter-x: -17.5rem;
 }
+.table-columns{
+    display: flex;
+    align-items: center;
+    margin-left: 8rem;
+    margin-top: 2rem;
+}
+.flex-space {
+    width: 2rem;
+  }
+.columns-text{
+    font-size: 16px;
+    color: #0360D9;
+    font-weight: 600;
+}
+.columns-textTwo{
+    font-weight: 600;
+}
