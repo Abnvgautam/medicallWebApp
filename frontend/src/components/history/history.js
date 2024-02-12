@@ -1,4 +1,3 @@
-import Navigation from '../../components/navbar/navbar'
 import './history.css'
 import '../../pages/patientDashboard/patientDashboard.css'
 import {Container, Card, Col, Row} from 'react-bootstrap'
@@ -12,12 +11,13 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {NavLink} from 'react-router-dom'
 import '../../pages/patientDashboard/patientDashboard.css'
+import NavbarDashboard from '../navbarDashboard/navbarDashboard';
 
 const History =() =>{
 
 return(
     <>
-        <Navigation />
+        <NavbarDashboard />
             <Container fluid className='container-patientTab'>
             <Card className='card-patient'>
             <Card.Body>

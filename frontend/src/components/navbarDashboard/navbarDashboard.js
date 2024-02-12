@@ -3,8 +3,10 @@ import Container from 'react-bootstrap/Container';
 import { Navbar, Nav} from 'react-bootstrap'
 import { Link, NavLink} from 'react-router-dom';
 import logo from '../navbar/MEDICALL.svg'
+import './navbarDashboard.css'
+import avatar from './avatar.svg'
 
-const navbarDashboard =()=>{
+const NavbarDashboard =()=>{
     return(
     <>
         <Navbar bg="light" data-bs-theme="light" className="navbar-length">
@@ -27,7 +29,15 @@ const navbarDashboard =()=>{
               <Nav.Link as={NavLink} to="/aboutus">About Us</Nav.Link>
             </Nav>
             <Nav className="ml-auto buttons">
-              
+            <p className='avatar-name-dashboard'>Finn Allen</p>
+            <img 
+                                src={avatar}
+                                width="52"
+                                height="52"
+                                alt="avatarImage"
+                                className='avatar-image-dashboard'
+                        />
+                         
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -37,4 +47,4 @@ const navbarDashboard =()=>{
     );
 };
 
-export default navbarDashboard;
+export default NavbarDashboard;

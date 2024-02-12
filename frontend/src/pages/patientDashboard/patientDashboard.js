@@ -1,4 +1,4 @@
-import Navbar from '../../components/navbarDashboard/navbarDashboard'
+import NavbarDashboard from '../../components/navbarDashboard/navbarDashboard'
 import './patientDashboard.css'
 import {Container, Card, Col, Row} from 'react-bootstrap'
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
@@ -16,7 +16,7 @@ const patientDashboard = () =>{
 
     return(
         <>
-            <Navbar />
+            <NavbarDashboard />
             <Container fluid className='container-patientTab'>
             <Card className='card-patient'>
             <Card.Body>

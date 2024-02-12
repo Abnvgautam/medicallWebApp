@@ -1,4 +1,4 @@
-import Navigation from '../../components/navbar/navbar'
+
 import './chat.css'
 import '../../pages/patientDashboard/patientDashboard.css'
 import '../../pages/patientDashboard/patientDashboard.css'
@@ -12,12 +12,13 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {NavLink} from 'react-router-dom'
+import NavbarDashboard from '../navbarDashboard/navbarDashboard';
 
 const Chat =() =>{
 
 return(
     <>
-        <Navigation />
+        <NavbarDashboard />
             <Container fluid className='container-patientTab'>
             <Card className='card-patient'>
             <Card.Body>
