@@ -24,10 +24,10 @@ function Navigation() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto navbar-content " >
-              <Nav.Link as={NavLink} to="/" className='nav-link'>Home</Nav.Link>
-              <Nav.Link as={NavLink} to="/ourdoctors" className='nav-link'>Our Doctors</Nav.Link>
-              <Nav.Link as={NavLink} to="/specialities" className='nav-link'>Specialities</Nav.Link>
-              <Nav.Link as={NavLink} to="/aboutus" className='nav-link'>About Us</Nav.Link>
+              <Nav.Link as={NavLink} to="/" className='nav-link-navbar'>Home</Nav.Link>
+              <Nav.Link as={NavLink} to="/ourdoctors" className='nav-link-navbar'>Our Doctors</Nav.Link>
+              <Nav.Link as={NavLink} to="/specialities" className='nav-link-navbar'>Specialities</Nav.Link>
+              <Nav.Link as={NavLink} to="/aboutus" className='nav-link-navbar'>About Us</Nav.Link>
             </Nav>
             <Nav className="ml-auto buttons">
               <Button as={NavLink} to="/login" variant="outline-primary" className="mx-4 button-style" >Log In</Button>
