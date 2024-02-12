@@ -3,6 +3,29 @@ body {
     background-color: white !important;
 }
 
+.nav-link {
+    position: relative;
+    padding-bottom: 10px; /* Adjust this value as needed */
+    color: black; /* Change color if needed */
+    text-decoration: none;
+    display: inline-block; /* Ensures the NavLink takes up only the necessary space */
+  }
+  
+  .nav-link.active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Place the bar at the center of the NavLink */
+    width: 50%; /* Set the width to 50% of the NavLink */
+    transform: translateX(-50%); /* Move the bar back by half its width to center it */
+    height: 3px; /* Thickness of the blue bar */
+    background-color: blue; /* Change color if needed */
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+
 .button-style {
     border-radius: 0px;
     padding: 10px 30px;
