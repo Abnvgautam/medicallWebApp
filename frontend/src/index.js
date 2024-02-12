@@ -16,6 +16,8 @@ import History from './components/history/history';
 import Chat from './components/chats/chat';
 import Profile from './components/profile/profile';
 import Settings from './components/settings/settings';
+import Login from './pages/login/login'
+import Signup from './pages/signup/signup'
 
 export default function App() {
   return(
@@ -33,6 +35,8 @@ export default function App() {
           <Route path="/patients/chat" Component={Chat} />
           <Route path="/patients/profile" Component={Profile} />
           <Route path="/patients/settings" Component={Settings} />
+          <Route path="/login" Component={Login} />
+          <Route path="/signup" Component={Signup} />
       </Routes>
     </BrowserRouter>
   );

@@ -30,8 +30,8 @@ function Navigation() {
               <Nav.Link as={NavLink} to="/aboutus" className='nav-link'>About Us</Nav.Link>
             </Nav>
             <Nav className="ml-auto buttons">
-              <Button variant="outline-primary" className="mx-4 button-style" >Log In</Button>
-              <Button variant="primary" className="button-style">Sign Up</Button>
+              <Button as={NavLink} to="/login" variant="outline-primary" className="mx-4 button-style" >Log In</Button>
+              <Button as={NavLink} to="/signup" variant="primary" className="button-style">Sign Up</Button>
             </Nav>
           </Navbar.Collapse>
         </Container>
