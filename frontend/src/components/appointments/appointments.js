@@ -1,7 +1,6 @@
-
 import './appointment.css'
 import '../../pages/patientDashboard/patientDashboard.css'
-import {Container, Card, Col, Row} from 'react-bootstrap'
+import {Container, Card, Col, Row, Button} from 'react-bootstrap'
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import EmailIcon from '@mui/icons-material/Email';
 import ArticleIcon from '@mui/icons-material/Article';
@@ -12,6 +11,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {NavLink} from 'react-router-dom'
 import NavbarDashboard from '../navbarDashboard/navbarDashboard';
+import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 
 const Appointments =() =>{
 
@@ -63,7 +63,15 @@ return(
                 </Col>
                 <Col>
                 <Card className='card-dashboard-expand'>
-                    <Card.Body className='appointment-text'>Appointments</Card.Body>
+                    <Card.Body className='appointment-text'>Appointments
+                        <Card className='card-appointment-call'>
+                            <SmartDisplayIcon sx={{ fontSize :82}} className='video-icon' />
+                            <p className='video-dateTime'>10:00 AM | Septemeber 5, 2024</p>
+                            <p className='doctorName-text'>Consultation with Dr Sean Paul</p>
+                            <Button variant="primary" className="btn-joinCall">Join Call</Button>
+                        </Card>
+                    </Card.Body>
+                   
                 </Card>
                 </Col>
             </Row>

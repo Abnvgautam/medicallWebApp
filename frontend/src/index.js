@@ -8,7 +8,8 @@ import Home from './pages/home/home';
 import About from './pages/about/about';
 import Specialities from './pages/specialities/specialities';
 import OurDoctors from './pages/doctors/doctors';
-import patients from './pages/patientDashboard/patientDashboard';
+import Patients from './pages/patientDashboard/patientDashboard';
+import Doctors from './pages/doctorDashboard/doctorDashboard';
 import Appointments from './components/appointments/appointments';
 import Messages from './components/messages/messages';
 import Reports from './components/reports/reports';
@@ -27,7 +28,8 @@ export default function App() {
           <Route path="/ourdoctors" Component={OurDoctors} />
           <Route path="/specialities" Component={Specialities} />
           <Route path="/aboutus" Component={About} />
-          <Route path="/patients" Component={patients} />
+          <Route path="/patients" Component={Patients} />
+          <Route path="/doctors" Component={Doctors} />
           <Route path="/patients/appointments" Component={Appointments} />
           <Route path="/patients/messages" Component={Messages} />
           <Route path="/patients/reports" Component={Reports} />

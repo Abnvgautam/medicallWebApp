@@ -1,0 +1,51 @@
+
+.container-doctorTab{
+    background-color: #0360D9;
+    overflow: auto;
+}
+.doctorTab{
+    width: 100px;
+    margin-left: 3.8rem;
+    height: 100px;
+    margin-top: 3.5rem;
+    border-radius: 0px;
+    /* margin-bottom: 4rem; */
+}
+
+
+.avatar-image-doctorTab{
+    margin-left: 1rem;
+
+}
+.avatar-name-doctorTab{
+    position: absolute;
+    top: 32px;
+    right: 12rem;
+    font-weight: bold;
+    font-size: 16px;
+    color: #0360D9;
+}
+.navbar-doctorTab{
+    padding-left: 26rem;
+}
+.docotorTab-text{
+    margin-left: 3.2rem;
+    margin-top: 8px;
+    color: white;
+}
+.docotorTab-text-two{
+    margin-left: 4.85rem;
+    margin-top: 8px;
+    color: white;
+}
+.appointments-text{
+    font-size: 28px;
+    color: black;
+    font-weight: 600;
+   text-align: center;
+    margin-top: 1rem;
+}
+
+.doctorTab-cards{
+    --bs-gutter-x: -17.5rem;
+}
