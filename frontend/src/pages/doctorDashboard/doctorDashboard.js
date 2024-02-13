@@ -77,10 +77,24 @@ const patientDashboard = () =>{
     </div>
         
     
+    <hr className='hr-doctorDashboard' style={{borderTop: "3px solid #000000 "}}></hr>
+
+    <div className='table-columns'>
+        <p className='columns-textTwoName'>Name</p>
+        <div className="flex-space"></div>
+        <p className='columns-textTwo'>Age</p>
+        <div className="flex-space"></div>
+        <p className='columns-textTwo'>Checkup</p>
+        <div className="flex-space"></div>
+        <p className='columns-textTwo'>Date</p>
+        <div className="flex-space"></div>
+        <p className='columns-textTwo'>Time</p>
+        
+    </div>
+
+    <hr className='hr-doctorDashboard' style={{borderTop: "3px solid #000000 "}}></hr>   
     
-            
-    
-            
+    <p className='text-below'>No Appointment at the moment</p>
         </>
     );
 };

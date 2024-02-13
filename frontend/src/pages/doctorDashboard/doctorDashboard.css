@@ -63,6 +63,15 @@
     color: #0360D9;
     font-weight: 600;
 }
-.columns-textTwo{
+.columns-textTwo,.columns-textTwoName{
+    font-weight: 600;
+}
+.hr-doctorDashboard{
+    margin-left: 8rem;
+    margin-right: 20rem;
+}
+.text-below{
+    margin-left: 8rem;
+    margin-top: 4rem;
     font-weight: 600;
 }
