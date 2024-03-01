@@ -18,6 +18,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended:false }))
 
 app.use('/api/records', require('./routes/recordRoutes'))
+app.use('/api/patient/profile', require('./routes/patientRoutes'))
+app.use('/api/doctor/profile', require('./routes/doctorRoutes'))
 
 app.use(errorHandler)
 
