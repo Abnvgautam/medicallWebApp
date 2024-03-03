@@ -1,3 +1,4 @@
+import React, {useState} from 'react'
 import ChooseUs from "../../components/chooseUs/chooseUs"
 import Footer from "../../components/footer/footer"
 import Navigation from "../../components/navbar/navbar"
@@ -13,7 +14,14 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 
+
 const Specialities = () => {
+    const [showResults, setShowResults] = useState(false);
+
+    const handleSearch = () => {
+        setShowResults(true);
+    };
+
     return (
         <>
         <Navigation />
@@ -55,12 +63,14 @@ const Specialities = () => {
                                 </Form.Select>
                             </Col>
                             <Col>
-                                <Button variant="primary" className='btn-card'>Search</Button>
+                                <Button variant="primary" className='btn-card' onClick={handleSearch}>Search</Button>
                             </Col>
                         </Row>
                     </Container>
                 </Card>
-                <p className="result">Results</p>
+                {showResults && (
+                    <>
+                        <p className="result">Results</p>
                 <Card className='specialities-card-big'>
                     
                     <Container>
@@ -110,6 +120,10 @@ const Specialities = () => {
                         </Row>
                     </Container>
                 </Card>
+                    </>
+                )}
+                
+                
         </Container>
         <Services />
         <ChooseUs />

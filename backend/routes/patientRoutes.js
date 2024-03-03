@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const {getPatient} = require('../controllers/patientController')
+const {getPatient, isPatient} = require('../controllers/patientController')
+const {protect} = require('../middleware/authMiddleware')
 
-router.route('/').get(getPatient)
+
+router.get('/', protect, isPatient, getPatient)
 
 module.exports = router

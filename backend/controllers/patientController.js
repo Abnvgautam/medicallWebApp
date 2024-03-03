@@ -2,7 +2,18 @@
 
 
 //Get patient profile
-// api/patient/proifle
+// api/patient/profile
+
+const isPatient = (req, res,next)=> {
+    if(req.user && req.user.role ==='patient'){
+        next()
+    }else{
+        res.status(403).json({
+            message:'Unauthorized'
+        })
+    }
+}
+
 
 const getPatient = (req,res)=>{
     res.send('This is patient profile')
@@ -10,4 +21,5 @@ const getPatient = (req,res)=>{
 
 module.exports = {
     getPatient,
+    isPatient,
 }
