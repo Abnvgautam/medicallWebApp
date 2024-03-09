@@ -10,9 +10,16 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {NavLink} from 'react-router-dom'
+import { logout } from '../../features/auth/authSlice';
+import {useDispatch} from 'react-redux'
 
 
-const patientDashboard = () =>{
+const PatientDashboard = () =>{
+    const dispatch = useDispatch()
+
+    const handleLogout =()=> {
+        dispatch(logout())
+    }
 
     return(
         <>
@@ -55,7 +62,7 @@ const patientDashboard = () =>{
                 <NavLink to="/patients/settings" activeClassName="active" className="dashboard-content dashboard-link">
                     <SettingsIcon /> Settings
                 </NavLink>
-                <NavLink to="/" activeClassName="active" className="dashboard-content dashboard-link">
+                <NavLink to="/" activeClassName="active" className="dashboard-content dashboard-link" onClick={handleLogout}>
                     <LogoutIcon /> Logout
                 </NavLink>
                 </Card>
@@ -75,4 +82,4 @@ const patientDashboard = () =>{
     );
 };
 
-export default patientDashboard;
+export default PatientDashboard;

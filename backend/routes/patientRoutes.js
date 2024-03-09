@@ -6,4 +6,4 @@ const {protect} = require('../middleware/authMiddleware')
 
 router.get('/', protect, isPatient, getPatient)
 
-module.exports = router
+module.exports = router 
