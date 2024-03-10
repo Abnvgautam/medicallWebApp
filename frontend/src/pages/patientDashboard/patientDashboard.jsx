@@ -10,16 +10,12 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {NavLink} from 'react-router-dom'
-import { logout } from '../../features/auth/authSlice';
-import {useDispatch} from 'react-redux'
+
+import {useSelector} from 'react-redux'
 
 
 const PatientDashboard = () =>{
-    const dispatch = useDispatch()
-
-    const handleLogout =()=> {
-        dispatch(logout())
-    }
+    const {user} = useSelector((state) => state.auth)
 
     return(
         <>
@@ -30,7 +26,7 @@ const PatientDashboard = () =>{
                         <Row>
                             <Col>
                                 <p className='dashboard-date'>10:12PM September 4, 2024</p>
-                                <p className='dashboard-text'>Good Evening, Finn Allen !</p>
+                                <p className='dashboard-text'>Good Evening, {user.name}</p>
                             </Col>
                             <Col>
                             
@@ -62,7 +58,7 @@ const PatientDashboard = () =>{
                 <NavLink to="/patients/settings" activeClassName="active" className="dashboard-content dashboard-link">
                     <SettingsIcon /> Settings
                 </NavLink>
-                <NavLink to="/" activeClassName="active" className="dashboard-content dashboard-link" onClick={handleLogout}>
+                <NavLink to="/" activeClassName="active" className="dashboard-content dashboard-link">
                     <LogoutIcon /> Logout
                 </NavLink>
                 </Card>
