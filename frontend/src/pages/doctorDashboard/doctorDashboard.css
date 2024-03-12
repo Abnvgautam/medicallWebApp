@@ -12,6 +12,14 @@
     /* margin-bottom: 4rem; */
 }
 
+.card-dashboard-expand{
+    width: 877px;
+    height: 595px;
+    margin-left: 45px !important;
+    margin-top: 20px;
+    border-radius: 0px;
+    margin-bottom: 20px;
+}
 
 .avatar-image-doctorTab{
     margin-left: 1rem;
@@ -20,7 +28,7 @@
 .avatar-name-doctorTab{
     position: absolute;
     top: 32px;
-    right: 12rem;
+    right: 8rem;
     font-weight: bold;
     font-size: 16px;
     color: #0360D9;

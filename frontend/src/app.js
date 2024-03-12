@@ -19,9 +19,12 @@ import Profile from './components/profile/profile';
 import Settings from './components/settings/settings';
 import Login from './pages/login/login'
 import Signup from './pages/signup/signup'
+import {useSelector} from 'react-redux'
 
 
 function App() {
+  const {user} = useSelector((state) => state.auth)
+
   return(
     <>
       <BrowserRouter>
@@ -32,8 +35,20 @@ function App() {
           <Route path="/aboutus" Component={About} />
           <Route path="/patients" Component={Patients} />
           <Route path="/doctors" Component={Doctors} />
-          <Route path="/patients/appointments" Component={Appointments} />
-          <Route path="/patients/messages" Component={Messages} />
+          {user && user.role ==='patient' && (
+            <Route path="/patients/appointments" Component={Appointments}/>
+          )}
+          {user && user.role === 'doctor' && (
+            <Route path="/doctors/appointments" Component={Appointments}/>
+          )}
+          {user && user.role ==='patient' && (
+            <Route path="/patients/messages" Component={Messages}/>
+          )}
+          {user && user.role === 'doctor' && (
+            <Route path="/doctors/messages" Component={Messages}/>
+          )}
+          {/* <Route path="/patients/appointments" Component={Appointments} /> */}
+          {/* <Route path="/patients/messages" Component={Messages} /> */}
           <Route path="/patients/reports" Component={Reports} />
           <Route path="/patients/history" Component={History} />
           <Route path="/patients/chat" Component={Chat} />

@@ -6,7 +6,7 @@ const User = require('../models/userModel')
 
 
 //Register new User
-//POST /api/users
+//POST /api/users/register
 
 const registerUser = asyncHandler(async (req, res) => {
 
@@ -81,13 +81,8 @@ const loginUser = asyncHandler(async (req, res) => {
 //Get user data
 //GET /api/users/me
 
-const getUser = asyncHandler(async (req, res) => {
-    const{_id, name, email} = await User.findById(req.user.id)
-    res.status(200).json({
-        id:_id,
-        name,
-        email
-    })
+const getUser = asyncHandler(async (req, res) => {  
+    res.status(200).json(req.user)
 })
 
 //Generate JWT

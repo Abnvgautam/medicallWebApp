@@ -9,13 +9,21 @@ import ChatIcon from '@mui/icons-material/Chat';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
-import {NavLink} from 'react-router-dom'
-
-import {useSelector} from 'react-redux'
+import {NavLink, useNavigate} from 'react-router-dom'
+import { logout, reset } from '../../features/auth/authSlice';
+import {useSelector, useDispatch} from 'react-redux'
 
 
 const PatientDashboard = () =>{
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
     const {user} = useSelector((state) => state.auth)
+
+    const onLogout =()=>{
+        dispatch(logout())
+        dispatch(reset())
+        navigate('/')
+    }
 
     return(
         <>
@@ -58,7 +66,7 @@ const PatientDashboard = () =>{
                 <NavLink to="/patients/settings" activeClassName="active" className="dashboard-content dashboard-link">
                     <SettingsIcon /> Settings
                 </NavLink>
-                <NavLink to="/" activeClassName="active" className="dashboard-content dashboard-link">
+                <NavLink to="/" activeClassName="active" className="dashboard-content dashboard-link" onClick={onLogout}>
                     <LogoutIcon /> Logout
                 </NavLink>
                 </Card>

@@ -1,24 +1,18 @@
 import Container from 'react-bootstrap/Container';
 import { Navbar, Nav, Button} from 'react-bootstrap'
-import { Link, NavLink, useNavigate} from 'react-router-dom';
+import { Link, NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './MEDICALL.svg';
 import './style.css';
-import {useSelector, useDispatch} from 'react-redux'
-import { logout, reset } from '../../features/auth/authSlice';
+import {useSelector} from 'react-redux'
+
 
 
 
 function Navigation() {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+
   const {user} = useSelector((state) => state.auth)
 
-  const onLogout =()=>{
-    dispatch(logout())
-    dispatch(reset())
-    navigate('/')
-  }
 
 
   return (
@@ -44,7 +38,7 @@ function Navigation() {
             </Nav>
             <Nav className="ml-auto buttons">
             {user ? (
-    <Button as={NavLink} to="/" variant="outline-primary" className="mx-4 button-style" onClick={onLogout}>Log Out</Button>
+    <Button as={NavLink} to={user.role === 'doctor' ? '/doctors' : '/patients'} variant="outline-primary" className="mx-4 button-style">Dashboard</Button>
   ) : (
     <>
       <Button as={NavLink} to="/login" variant="outline-primary" className="mx-4 button-style">Log In</Button>

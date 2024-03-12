@@ -1,9 +1,9 @@
 import { Container, Card, Button} from "react-bootstrap";
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import {useNavigate} from 'react-router-dom'
+import {NavLink, useNavigate} from 'react-router-dom'
 import {toast} from 'react-toastify'
-import { register, reset } from "../../features/auth/authSlice";
+import { register } from "../../features/auth/authSlice";
 import './signup.css'
 import medicall from './MEDICALL.svg'
 import Box from '@mui/material/Box';
@@ -24,19 +24,21 @@ const Signup =() =>{
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
-    const {user, isLoading, isError, isSuccess, message} = useSelector((state) => state.auth)
+    const {isLoading} = useSelector((state) => state.auth)
 
-    useEffect(()=>{
-        if(isError){
-            toast.error(message)
-        }
-        if(isSuccess || user) {
-            navigate('/patients')
-        }
+    // useEffect(()=>{
+    //     if(isError){
+    //         console.log("Error occurred:", message);
+    //         toast.error(message)
+    //     }
+    //     if(isSuccess || user) {
+    //         console.log("Successful registration. Navigating to /login");
+    //         navigate('/login')
+    //     }
 
-        dispatch(reset())
+    //     dispatch(reset())
          
-    },[user, isError, isSuccess, message, navigate, dispatch])
+    // },[user, isError, isSuccess, message, navigate, dispatch])
 
 
     const onChange =(e)=>{
@@ -46,14 +48,19 @@ const Signup =() =>{
         }))
     }
 
-    const onSubmit = (e) =>{
+    const onSubmit = async (e) =>{
         e.preventDefault()
 
         const userData = {
             name,email,password,role,
         }
 
-        dispatch(register(userData))
+        const result = await dispatch(register(userData))
+        if(!result.payload._id){
+            toast.error(result.payload)
+            return
+        }
+        navigate('/login')
     }
 
     if(isLoading){
@@ -76,7 +83,7 @@ const Signup =() =>{
                     <p className="signup-text">Sign Up</p>
                     <Box
                         component="form"
-                        className="form-email"
+                        className="form-email-signup"
                         onSubmit={onSubmit} // Attach onSubmit here
                         sx={{
                             '& > :not(style)': { m: 1, width: '36ch', marginLeft: '16rem' },
@@ -85,13 +92,13 @@ const Signup =() =>{
                         <TextField id="name" name='name' value={name} className="emailForm" label="Full Name" variant="standard" onChange={onChange} />
                         <TextField id="email" name='email' value={email} className="emailForm" label="Email" variant="standard" onChange={onChange} />
                         <TextField id="role" name='role' value={role} className="emailForm" label="Role" variant="standard" onChange={onChange} />
-                        <TextField id="password" name='password' value={password} className="PasswordForm" label="Password" variant="standard" onChange={onChange} />
+                        <TextField id="password" name='password' type="password" value={password} className="PasswordForm" label="Password" variant="standard" onChange={onChange} />
                         <Button type="submit" variant="primary" className="btn-signup">Signup</Button>
                     </Box>
                     
                     
                     <Button variant="outline-dark" className="btn-signup-dark">Signup with Google</Button>
-                    <p className="login-here">Already have an account?<a href="/login">Login Here</a></p>
+                    <p className="login-here">Already have an account?<NavLink to="/login">Login Here</NavLink></p>
                 </Card>
             
         </Container>
